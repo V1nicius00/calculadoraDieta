@@ -50,8 +50,12 @@ function calc_macros($gender, $tmb, $lvl, $obj){
     $carbo_format = number_format($carboidratos, 0);
     $gordura_format = number_format($gorduras, 0);
 
+    $total_kcal = (($protein_format * 4) + ($carbo_format * 4) + ($gordura_format * 9));
+
+    $total_kcal_format = number_format($total_kcal, 0);
+
     echo "<p class='result-macro' id='result'> Quantidade de Proteína: $protein_format g | 
-    Quantidade de Carboidratos: $carbo_format g | Quantidade de Gordura: $gordura_format g</p>";
+    Quantidade de Carboidratos: $carbo_format g | Quantidade de Gordura: $gordura_format g<br>Total de calorias da dieta: $total_kcal_format kcal</p>";
     
 
 }
